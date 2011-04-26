@@ -15,12 +15,15 @@
 		  <% @shouts.each do |shout| %>	
 			 <li>
 				<p>
-				<%= truncate(raw(auto_link html_escape((shout.body))), :length => 140) %> 
+					<%= gravatar(shout.user)%>
+				<%= raw(auto_link html_escape((shout.body))) %> 
 				<span class ="time">
 				<%= time_ago_in_words shout.created_at%> ago
-
 				</span>
+				by <%= shout.user.email %>
+				
 				<%= link_to "Delete", shout_path(shout), :method => :delete %>
+				</p>
 			</li>
 	     <% end %>
 		</ul>

@@ -1,14 +1,14 @@
-.flash_success {
+#flash_success {
 	background: yellow;
 	color: black;
 }
 
-.flash_failure {
+#flash_failure {
 	background: red;
 	color: white;
 }
 
-.flash_delete{
+#flash_delete{
 	background: black;
 	color: white;
 }
