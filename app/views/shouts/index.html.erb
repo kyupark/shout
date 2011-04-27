@@ -3,32 +3,31 @@
 		<%= form_for @shout do |form| %>
 			<p>
 				<%= form.text_field :body, :id => "body" %>
-				<%= button_to_function "Shout", :method => :create %> 
+				<%= button_to "Shout", :method => :create %> 
 			</p>
 		<% end %>
 		
 		<script type="text/javascript">
 			body.focus();
 		</script>
-	
+	</div>
+	<div class = "shouts">
 		<ul>	
 		  <% @shouts.each do |shout| %>	
 			 <li>
 				
 					<%= gravatar(shout.user)%>
-				<p>	
 				<%= raw(auto_link html_escape((shout.body))) %> 
-				</p>
-				<p>	
 				<span class ="time">
 				<%= time_ago_in_words shout.created_at%> ago
 				</span>
 				by <%= shout.user.email %>
 				
 				<%= link_to "Delete", shout_path(shout), :method => :delete %>
-				</p>
+				
 			</li>
 	     <% end %>
 		</ul>
 	</div>
+
 </html>
