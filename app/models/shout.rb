@@ -6,4 +6,6 @@ class Shout < ActiveRecord::Base
   def self.most_recent
     order("created_at desc")
   end
+  
+
 end

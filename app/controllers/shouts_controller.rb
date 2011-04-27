@@ -1,9 +1,14 @@
 class ShoutsController < ApplicationController
-  before_filter :authorize
+  before_filter :authorize, :except => [:index]
   
   def index
     @shouts = Shout.most_recent
     @shout = Shout.new
+    if current_user != nil
+      @signed_in = true
+    elsif
+      @signed_in = false
+    end
   end
   
   def destroy

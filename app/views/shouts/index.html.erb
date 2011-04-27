@@ -1,4 +1,5 @@
 <html>
+	<% if @signed_in %>
 	<div class = "form">	
 		<%= form_for @shout do |form| %>
 			<p>
@@ -11,6 +12,7 @@
 			body.focus();
 		</script>
 	</div>
+	<% end %>
 	<div class = "shouts">
 		<ul>	
 		  <% @shouts.each do |shout| %>	
