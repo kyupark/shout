@@ -32,7 +32,7 @@
 	<P align = "right">	  	
 	<% if signed_in? %>
 	  <%= gravatar current_user, 25%>	
-	  <%= link_to_function "Sign out", sign_out_path, :method => :delete %> 
+	  <%= link_to "Sign out", sign_out_path, :method => :delete %> 
 	<% end %>
 	</p>
 	<center> <h1> SushiShouter </h1> </center>
