@@ -1,16 +1,19 @@
 #flash_success {
-	background: yellow;
-	color: black;
+	background: green;
+	color: white;
+	text-align: center;
 }
 
 #flash_failure {
 	background: red;
 	color: white;
+	text-align: center;
 }
 
 #flash_delete{
-	background: black;
-	color: white;
+	background: yellow;
+	color: black;
+	text-align: center;
 }
 
 .time {
