@@ -3,7 +3,7 @@
 		<%= form_for @shout do |form| %>
 			<p>
 				<%= form.text_field :body, :id => "body" %>
-				<%= form.submit "Shout"%>
+				<%= button_to_function "Shout", :method => :create %> 
 			</p>
 		<% end %>
 		
@@ -23,6 +23,7 @@
 				by <%= shout.user.email %>
 				
 				<%= link_to "Delete", shout_path(shout), :method => :delete %>
+				<%= link_to_function("Delete f", "if (confirm('Really?')) delete") %>
 				</p>
 			</li>
 	     <% end %>
