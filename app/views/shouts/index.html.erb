@@ -14,16 +14,18 @@
 		<ul>	
 		  <% @shouts.each do |shout| %>	
 			 <li>
-				<p>
+				
 					<%= gravatar(shout.user)%>
+				<p>	
 				<%= raw(auto_link html_escape((shout.body))) %> 
+				</p>
+				<p>	
 				<span class ="time">
 				<%= time_ago_in_words shout.created_at%> ago
 				</span>
 				by <%= shout.user.email %>
 				
 				<%= link_to "Delete", shout_path(shout), :method => :delete %>
-				<%= link_to_function("Delete f", "if (confirm('Really?')) delete") %>
 				</p>
 			</li>
 	     <% end %>
