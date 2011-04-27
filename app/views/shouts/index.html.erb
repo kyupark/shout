@@ -2,7 +2,7 @@
 	<div class = "form">	
 		<%= form_for @shout do |form| %>
 			<p>
-				<%= form.text_field :body, :id => "body" %>
+				<%= form.text_area :body, :id => "body", :rows => 2 %>
 				<%= button_to "Shout", :method => :create %> 
 			</p>
 		<% end %>

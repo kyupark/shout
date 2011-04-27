@@ -1,3 +1,21 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;;
+}
+textarea {
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Helvetica;
+	font-size: 150%;
+}
+
+ul {
+	font-family: Helvetica;
+}
+
+li {
+	font-family: Helvetica;
+}
+
 #flash_success {
 	background: green;
 	color: white;
